@@ -1,0 +1,15 @@
+<div class="container" *ngIf="errormessage">
+  <h3>ERROR MESSAGE{{errormessage}}</h3>
+</div>
+<h2> Welcome Page</h2>
+<p>You can manage you todos click <a routerLink="/list">here</a></p>
+
+<div class="container">
+  <p>Fetch the backend data</p>
+  <button (click)="fetchBackenddatawithparameter()" class="btn btn-primary">GET DATA BACKEND</button>
+</div>
+<div class="container" *ngIf="value">
+  <p>There is the Backend {{value}}</p>
+</div>
+
+ 

@@ -1,0 +1,14 @@
+<header >
+<nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+       <div class="navbar-brand"><a href='https://lnLockDown.com'>InLockDown</a>
+       </div>
+       <ul class="navbar-nav">
+           <li><a *ngIf="this.authenticationservice.isLogin()" routerLink='/list' class='nav-link'>Todos</a></li>
+           <li><a *ngIf="this.authenticationservice.isLogin()" routerLink='/welcome/name' class='nav-link'>Home</a></li>
+       </ul>
+       <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li><a *ngIf="!this.authenticationservice.isLogin()" routerLink='/login' class='nav-link'>Login</a></li>
+        <li><a *ngIf="this.authenticationservice.isLogin()" routerLink='/logout' class='nav-link'>Logout</a></li>
+    </ul>
+</nav>
+</header>

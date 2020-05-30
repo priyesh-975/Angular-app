@@ -1,0 +1,12 @@
+<div class="container">
+<div class="alert alert-warning" *ngIf='error'>Invailed credentials</div>
+  <div>
+    <!-- <form (ngSubmit)="onLogin()"> -->
+     <!-- <form (ngSubmit)="basiconLogin()">  -->
+     <form (ngSubmit)="jwtloginauthentication()"> 
+Username: <input name="username" type="text" [(ngModel)]="username"/>
+Password: <input name="password" type="password" [(ngModel)]="password"/>
+<button type="submit">Login</button>
+</form>
+</div>
+</div>

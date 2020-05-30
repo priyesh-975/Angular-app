@@ -1,0 +1,26 @@
+<h2>Todo</h2>
+<div class="container">
+    <div *ngIf="thisform.invalid && (thisform.dirty||thisform.touched)" class="alert alert-danger">
+     <div *ngIf="thisname.invalid">Name should be of 4 character or more than 4</div>
+    
+
+        
+
+    </div>
+    <form (ngSubmit)="!thisform.invalid && savetodo()"     #thisform="ngForm">
+    <fieldset class="form-group">
+        <input type="text"
+        [(ngModel)]='todo.name' 
+        name="name" #thisname="ngModel" minlength="4" required class="form-control">
+    </fieldset>
+    <fieldset class="form-group">
+        <input type="date" 
+        #thisdate="ngModel"
+        [ngModel]="todo.targetDate | date:'yyyy-MM-dd'"
+        (ngModelChange)="todo.targetDate=$event"
+        name="targetDate" required class="form-control">
+    </fieldset>
+
+   <button type="submit"  class="btn btn-success">Save</button>
+</form>
+</div>
