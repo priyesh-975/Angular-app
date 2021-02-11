@@ -11,6 +11,7 @@ describe('ListComponent', () => {
       declarations: [ ListComponent ]
     })
     .compileComponents();
+	
   }));
 
   beforeEach(() => {
@@ -23,3 +24,4 @@ describe('ListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+//uuuuu
